@@ -1,0 +1,7 @@
+import java.io.*;
+
+public class SWEA_1945 {
+	public static void main(SWEA_1945[] args) {
+		
+	}
+}

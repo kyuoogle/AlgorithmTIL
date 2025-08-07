@@ -1,0 +1,27 @@
+import java.util.ArrayDeque;
+import java.util.Stack;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+
+class SWEA_1218 {
+	
+	static char[] front = {'(', '{', '[', '<'};
+	static char[] rear = {')', '}', ']', '>'};
+	
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		
+		for(int tc = 1; tc <= 10; tc++) {
+			int N = Integer.parseInt(br.readLine());
+			
+			
+			
+			
+			
+		}
+	}
+	private static boolean isOK() {
+		Deque<Character> stack = new ArrayDeque<>();
+	}
+}

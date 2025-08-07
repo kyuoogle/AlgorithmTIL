@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+
+public class SWEA_18578 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // 입력을 빠르게 받기 위한 BufferedReader 사용
+
+        int T = Integer.parseInt(br.readLine()); // 테스트 케이스 수 입력 받기
+
+        for (int tc = 1; tc <= T; tc++) { // 테스트 케이스 반복 (1번부터 T번까지)
+            int N = Integer.parseInt(br.readLine()); // 상자의 열 개수 (가로 길이) 입력 받기
+
+            int[] nums = new int[N]; // 각 열에 쌓인 상자의 개수를 저장할 배열
+
+            StringTokenizer st = new StringTokenizer(br.readLine()); // 한 줄에 입력된 상자 높이들을 공백 기준으로 나눔
+            for (int i = 0; i < N; i++) {
+                nums[i] = Integer.parseInt(st.nextToken()); // 상자의 개수(높이)를 배열에 저장
+            }
+
+            int mx_cnt = 0; // 최대 낙차를 저장할 변수
+
+            // 각 열을 기준으로 낙차 계산
+            for (int j = 0; j < N; j++) {
+                int cnt = 0; // j번째 열의 상자가 떨어질 수 있는 칸 수 (낙차)
+
+                // j번째 열보다 오른쪽에 있는 열들 중,
+                // 자신보다 낮은 열의 개수를 낙차로 셈
+                for (int i = j + 1; i < N; i++) {
+                    if (nums[j] > nums[i]) { // 오른쪽 열의 높이가 작으면
+                        cnt++; // 낙차 1 증가
+                    }
+                }
+
+                // 현재까지의 최대 낙차와 비교해서 갱신
+                if (mx_cnt < cnt) {
+                    mx_cnt = cnt;
+                }
+            }
+
+            // 테스트 케이스 번호와 함께 최대 낙차 출력
+            System.out.println("#" + tc + " " + mx_cnt);
+        }
+    }
+}
+
