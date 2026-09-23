@@ -11,11 +11,14 @@ class Solution {
             int j = commands[l][1];
             int k = commands[l][2];
             
-            int[] tmp = Arrays.copyOfRange(array, i - 1, j);
+            int[] newArr = new int[j - i + 1];
+            for(int h = 0; h < newArr.length; h++) {
+                newArr[h] = array[i - 1 + h];
+            }
             
-            Arrays.sort(tmp);
+            Arrays.sort(newArr);
             
-            ans[l] = tmp[k - 1];
+            ans[l] = newArr[k-1];
         }
         
         return ans;

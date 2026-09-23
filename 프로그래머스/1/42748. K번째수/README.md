@@ -1,10 +1,10 @@
 # [level 1] K번째수 - 42748 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42748?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42748?utm_source=chatgpt.com) 
 
 ### 성능 요약
 
-메모리: 72.1 MB, 시간: 0.47 ms
+메모리: 81.3 MB, 시간: 2.96 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 04월 28일 14:43:36
+2026년 09월 23일 18:23:25
 
 ### 문제 설명
 
