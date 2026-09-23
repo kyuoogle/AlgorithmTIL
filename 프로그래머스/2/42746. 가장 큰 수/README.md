@@ -1,10 +1,10 @@
 # [level 2] 가장 큰 수 - 42746 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42746?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42746?language=java&utm_source=chatgpt.com) 
 
 ### 성능 요약
 
-메모리: 109 MB, 시간: 172.41 ms
+메모리: 129 MB, 시간: 112.61 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 04월 28일 15:19:55
+2026년 09월 23일 18:33:40
 
 ### 문제 설명
 
