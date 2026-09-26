@@ -3,20 +3,24 @@ class Solution {
     int answer = 0;
     
     public int solution(int[] numbers, int target) {
-        dfs(numbers, target, 0, 0);
+        
+        dfs(0, 0, numbers, target);
         
         return answer;
     }
     
-    public void dfs(int[] numbers, int target, int index, int sum) {
-        if(index == numbers.length) {
+    void dfs(int depth, int sum, int[] numbers, int target) {
+        
+        // 모든 숫자를 사용했는지
+        if(depth == numbers.length) {
             if(sum == target) {
                 answer++;
             }
             return;
         }
-        
-        dfs(numbers, target, index + 1, sum + numbers[index]);
-        dfs(numbers, target, index + 1, sum - numbers[index]);
+        // 현재 숫자를 + 하는 경우
+        dfs(depth + 1, sum + numbers[depth], numbers, target);
+        // 현재 숫자를 - 하는 경우
+        dfs(depth + 1, sum - numbers[depth], numbers, target);
     }
 }
